@@ -41,12 +41,22 @@ See [Methodology and known limitations](docs/methodology.md). The archived imple
 
 - [x] Document official source and historical approach
 - [x] Archive the August 2 historical script with local machine paths redacted
-- [ ] Add reviewed copybooks and synthetic test fixtures
-- [ ] Refactor into configurable modules
+- [ ] Add reviewed copybooks and valid fixed-width synthetic test fixtures (record-order illustration added)
+- [x] Add initial configurable extraction and integration modules (new refactor; not yet validated on DBF900)
 - [ ] Validate oil/gas field normalization and record boundaries
-- [ ] Add unit and integration tests
+- [x] Add initial unit tests (execution and end-to-end compatibility still to be verified)
 - [ ] Document downstream SQL schema and joins after confirming original implementation
 
 ## Attribution
 
 Historical implementation and project documentation: Jay Oliver. Source dataset and record layout documentation: Railroad Commission of Texas. This is an independent project repository, not an official RRC product.
+
+## Repository layout
+
+- `src/` — new modular parsing, extraction, RK02 association and validation code
+- `docs/` — methodology, derived-field dictionary and workflow diagram
+- `examples/synthetic_records/` — illustrative record-order example (not a valid DBF900 fixture)
+- `tests/` — initial unit tests; not yet verified in CI
+- `archive/` — redacted historical August 2025 implementation
+
+See [workflow and local run instructions](docs/workflow.md).
